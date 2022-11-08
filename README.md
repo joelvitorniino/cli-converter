@@ -1,5 +1,5 @@
 # cli-converter
 
-CLI converter is a binary to converter od2 to pdf.
+CLI converter is a binary to converter odf to pdf.
 
 Binary to Windows available on releases.
