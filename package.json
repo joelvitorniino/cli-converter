@@ -5,13 +5,26 @@
   "repository": "https://github.com/joelvitorniino/cli-converter.git",
   "author": "joelvitorniino <joelprofessor13@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "converter-odt": "./dist/cli/cli.js"
+  },
   "scripts": {
     "dev": "ts-node src/cli/app.ts",
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "package": "pkg . --targets node16-x64 --output converter-odt"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
+    "@types/yargs": "^17.0.13",
+    "pkg": "^5.8.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "libreoffice-convert": "^1.4.1",
+    "yargs": "^17.6.2"
   }
 }
